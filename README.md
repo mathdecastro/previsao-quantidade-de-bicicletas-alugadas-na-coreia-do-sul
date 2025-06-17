@@ -26,10 +26,18 @@ Um grupo de analistas de dados da nossa consultoria realizou uma pesquisa inicia
 |Feriado|Indica se é feriado ou não na data do aluguel|Binária|
 |Dia Útil|Indica se é dia útil ou não na data do aluguel|Binária|
 
-#### **Objetivo**
+#### **Meu papel neste projeto**
 
-O objetivo deste projeto é o de conseguir prever a quantidade de bicicletas alugadas por hora na capital da Coréia do Sul.
+O meu papel nestre projeto é o de propor um modelo que consiga prever a quantidade de bicicletas alugadas por hora na capital da Coréia do Sul.
 
 #### **Análise de Dados Exploratória (EDA)**
 
 Foi feita uma análise de dados exploratória, localizada no arquivo `eda.ipynb`, para entender melhor como as variáveis *feature* selecionadas se comportam e como elas influenciam na *target*, além de entender o comportamento da *target* ao longo do tempo, investigando ela como uma componente de uma série temporal.
+
+#### **Modelagem**
+
+Primeiramente, foram testados dois modelos do pacote scikit-learn, *RandomForestRegressor* e *LinearRegression*, com todas as variáveis já pré processadas, o que resultou em um dos modelos (*RandomForestRegressor*) com um $\small R^2$ acima de 0.90 e um erro médio absoluto de aproximadamente 110 bicicletas.
+
+Posteriormente, foi idealizada a criação de uma rede neural artificial do tipo perceptron multicamadas para verificar se um modelo deste tipo conseguiria melhores resultados nas métricas de avaliação do que o de floresta aleatória.
+
+Esta rede neural foi modelada, construída (utilizando o pacote torch) e testada com os dados. Ela apresentou resultados de $\small R^2$ e erro médio absoluto bem parecidos com o de floresta aleatória. Entretanto, o modelo selecionado para o projeto da empresa foi o de floresta aleatória devido à sua simplicidade de treino e resultados bons nas métricas de avaliação, em comparação com o de redes neurais.
