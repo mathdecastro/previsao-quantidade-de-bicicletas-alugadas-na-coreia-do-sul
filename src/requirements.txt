@@ -1,5 +1,6 @@
 pandas==2.2.3
 matplotlib==3.10.3
 datetime==5.5
-seaborn
-sklearn
+seaborn==0.13.2
+sklearn==1.6.1
+torch==2.7.1
